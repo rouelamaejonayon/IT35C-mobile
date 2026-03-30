@@ -1,22 +1,22 @@
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
+import { IonButton, IonContent, IonHeader, IonPage, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
 
-const Templates: React.FC = () => {
+const Page1: React.FC = () => {
+
     return (
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Blank</IonTitle>
+                    <IonTitle>Page1</IonTitle>
                 </IonToolbar>
             </IonHeader>
-            <IonContent fullscreen>
-                <IonHeader collapse="condense">
-                    <IonToolbar>
-                        <IonTitle size="large">Blank</IonTitle>
-                    </IonToolbar>
-                </IonHeader>
+            <IonContent className="ion-padding">
+                <IonButton expand="full">
+                    Page1
+                </IonButton>
+
             </IonContent>
         </IonPage>
+
     );
 };
-
-export default Templates;
+export default Page1;

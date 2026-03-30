@@ -15,7 +15,7 @@ const Login: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-padding">
-                <IonButton expand="full">
+                <IonButton expand="full" onClick={() => doLogin()}>
                     Login
                 </IonButton>
 

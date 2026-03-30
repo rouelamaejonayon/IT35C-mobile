@@ -11,7 +11,7 @@ const Templates: React.FC = () => {
             <IonContent fullscreen>
                 <IonHeader collapse="condense">
                     <IonToolbar>
-                        <IonTitle size="large">Blank</IonTitle>
+                        <IonTitle size="large">Templates</IonTitle>
                     </IonToolbar>
                 </IonHeader>
             </IonContent>
