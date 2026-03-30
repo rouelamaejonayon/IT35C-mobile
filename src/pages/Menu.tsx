@@ -10,9 +10,6 @@ const Menu: React.FC = () => {
                 </IonToolbar>
             </IonHeader>
             <IonContent className="ion-padding">
-                <IonButton expand="full">
-                    Login
-                </IonButton>
 
             </IonContent>
         </IonPage>
