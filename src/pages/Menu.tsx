@@ -1,5 +1,5 @@
 import { IonButton, IonContent, IonHeader, IonIcon, IonItem, IonMenu, IonMenuToggle, IonPage, IonRouterOutlet, IonSplitPane, IonTitle, IonToolbar, useIonRouter } from "@ionic/react";
-import { homeOutline } from "ionicons/icons";
+import { homeOutline, informationOutline, logOutOutline, settingsOutline } from "ionicons/icons";
 import { Redirect, Route } from "react-router";
 import Home from "./Home";
 import Page2 from "./Page2";
@@ -8,7 +8,9 @@ import Page1 from "./Page1";
 const Menu: React.FC = () => {
 
     const path = [
-        { name: 'Home', url: 'app//home', icon: homeOutline }
+        { name: 'Home', url: 'app//home', icon: homeOutline },
+        { name: 'Page1', url: "/app/page1", icon: settingsOutline },
+        { name: 'Page2', url: "/app/page2", icon: informationOutline }
     ]
 
     return (
@@ -35,6 +37,7 @@ const Menu: React.FC = () => {
                         ))}
 
                         <IonButton routerLink="/" routerDirection="back" expand="full">
+                            <IonIcon icon={logOutOutline} slot="start"></IonIcon>
                             Logout
 
                         </IonButton>
@@ -45,13 +48,12 @@ const Menu: React.FC = () => {
 
                 <IonRouterOutlet id="main">
                     <Route exact path="/app/home" component={Home} />
-                    <Route exact path="/app" >
+                    <Route exact path="/app">
                         <Redirect to="/app/home" />
                     </Route>
 
-                    <Route exact path="/app/page1" component={Page1} />
-                    <Route exact path="/app/page2" component={Page2} />
-
+                    <Route exact path="/app/Page1" component={Page1} />
+                    <Route exact path="/app/Page2" component={Page2} />
                 </IonRouterOutlet>
             </IonSplitPane>
 
